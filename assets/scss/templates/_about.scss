@@ -1,0 +1,38 @@
+.entry-title-header {
+    background-attachment: scroll;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    transition: .3s;
+    
+    @include breakpoint(medium) {
+        background-attachment: fixed;
+        height: 60vh;
+    }
+    
+    .entry-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+}
+
+.ourmission {
+    height: 350px;
+    
+}
+
+h1,h2,h3,h4 {
+    color:#669999;
+}
+
+.team {
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    background-color: #eaeae7 ;
+}
