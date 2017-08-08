@@ -10,10 +10,11 @@
 
 //  Settings
 @import "global/settings"; // Foundation settings file.
-@import "global/demosite-settings"; // These settings are only used for the demosite. Feel free to remove.
+//@import "global/demosite-settings"; // These settings are only used for the demosite. Feel free to remove.
 
 // Foundation mixins & browser resets
 @import '../components/foundation-sites/scss/foundation';
+
 
 
 // WP overrides
@@ -96,4 +97,7 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
-@import "templates/demosite"; // This template is used for the demosite. Feel free to remove.
+//@import "templates/demosite"; // This template is used for the demosite. Feel free to remove.
+@import "templates/front-page";
+
+

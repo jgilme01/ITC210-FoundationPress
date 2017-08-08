@@ -70,5 +70,8 @@
     "postinstall": "bower install && gulp build",
     "production": "gulp --production",
     "watch": "gulp"
+  },
+  "dependencies": {
+    "npm-watch": "^0.2.0"
   }
 }
