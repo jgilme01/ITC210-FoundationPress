@@ -20,7 +20,7 @@ node_modules/
 bower.json
 composer.json
 composer.lock
-gulpfile.js
+gulpfile.js 
 MIT-LICENSE.txt
 package.json
 package-lock.json
