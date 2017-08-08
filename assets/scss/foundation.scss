@@ -16,6 +16,7 @@
 @import '../components/foundation-sites/scss/foundation';
 
 
+
 // WP overrides
 @import "global/wp-admin"; // Fix issues with wp-admin bar positioning
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
@@ -99,3 +100,5 @@
 //@import "templates/demosite"; // This template is used for the demosite. Feel free to remove.
 
 @import "templates/about";
+
+@import "templates/front-page";
