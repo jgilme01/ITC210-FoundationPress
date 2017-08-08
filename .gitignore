@@ -17,8 +17,7 @@ node_modules/
 .babelrc
 .bowerrc
 .editorconfig
-bower.json
-composer.json
+*.json
 composer.lock
 gulpfile.js 
 MIT-LICENSE.txt
