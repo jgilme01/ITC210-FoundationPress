@@ -53,5 +53,9 @@
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:80/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<!--not working on chrome or correct port-->
 </body>
 </html>

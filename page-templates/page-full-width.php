@@ -2,15 +2,14 @@
 /*
 Template Name: Full Width
 */
+
 get_header(); ?>
 
-<?php //get_template_part( 'template-parts/featured-image' ); ?>
-
+<?php// get_template_part( 'template-parts/featured-image' ); ?>
 <?php $backImg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );?>
 <header class="entry-title-header" style="background-image: url('<?php echo $backImg[0]; ?>');">
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 </header>
-
 <div class="main-wrap full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -36,9 +35,7 @@ get_header(); ?>
 		<?php do_action( 'foundationpress_page_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
-
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 </div>
-
 <?php get_footer();

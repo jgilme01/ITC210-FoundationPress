@@ -15,6 +15,7 @@
 @import '../components/foundation-sites/scss/foundation';
 
 
+
 // WP overrides
 @import "global/wp-admin"; // Fix issues with wp-admin bar positioning
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
@@ -95,8 +96,11 @@
 // Templates
 @import "templates/custom";
 @import "templates/front";
+
 @import "templates/page";
 @import "templates/stories";
 
 @import "templates/frontpage";
 @import "templates/kitchen-sink";
+
+@import "templates/about";
