@@ -1,0 +1,26 @@
+.entry-title-header {
+	background-attachment: scroll;
+	background-position: bottom center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+	position: relative;
+	transition: .3s;
+	
+	@include breakpoint(medium) {
+		background-attachment: fixed;
+		height: 50vh;
+	}
+	
+	.entry-title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		
+		&.single {
+			color: #000;
+		}
+	}
+}

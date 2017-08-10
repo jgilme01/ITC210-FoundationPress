@@ -9,6 +9,10 @@
 get_header(); ?>
 
 <?php get_template_part( 'template-parts/featured-image' ); ?>
+<?php $backImg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );?>
+<header class="entry-title-header">
+	<h1 class="entry-title single"><?php the_title(); ?></h1>
+</header>
 
 <div class="main-wrap" role="main">
 

@@ -7,7 +7,7 @@
  */
 
 do_action( 'foundationpress_before_searchform' ); ?>
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
 	<?php do_action( 'foundationpress_searchform_top' ); ?>
 	<div class="input-group">
 		<input type="text" class="input-group-field" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'foundationpress' ); ?>">

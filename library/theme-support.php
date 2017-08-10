@@ -29,6 +29,21 @@ function foundationpress_theme_support() {
 	// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support( 'post-thumbnails' );
 
+	if ( function_exists( 'add_theme_support' ) ) { 
+    add_image_size( 'stories', 600, 600, true); // name, width, height, crop 
+    add_filter('image_size_names_choose', 'my_image_sizes');
+	}
+
+	function my_image_sizes($sizes) {
+		$addsizes = array(
+			"stories" => __( "Stories square image")
+		);
+		$newsizes = array_merge($sizes, $addsizes);
+		return $newsizes;
+	}
+	
+	add_action('after_setup_theme', 'add_custom_sizes');
+	
 	// RSS thingy
 	add_theme_support( 'automatic-feed-links' );
 

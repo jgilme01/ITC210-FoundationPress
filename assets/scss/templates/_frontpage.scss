@@ -1,0 +1,164 @@
+// Page header
+.front-banner {
+		position: relative;
+	
+  .front-banner-inner {
+    @include grid-row;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+  }
+
+  @include breakpoint(small) {
+    background: url('../images/front/banner2.jpg') bottom center;
+    background-size: cover;
+    background-position: center;
+    padding: rem-calc(250) 0;
+    margin: 0;
+    height: auto;
+    position: relative;
+    text-align: left;
+  }
+
+  @include breakpoint(medium) {
+    background: url('../images/front/banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: rem-calc(685);
+    margin: 0;
+  }
+
+  .tagline {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+			@include grid-column(12);
+			@include grid-column-position(center);
+			text-align: center;
+    }
+		.button {
+			margin-top: rem-calc(20);
+		}
+  }
+
+  h1 {
+    color: #fefefe;
+    font-weight: 700;
+
+    @include breakpoint(small) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 2.5rem;
+    }
+		
+    @include breakpoint(large) {
+      font-size: 3rem;
+    }
+  }
+
+  h4 {
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 1.3125rem;
+  }
+}
+
+.take-action {
+	background: #eaeae9;
+	padding: rem-calc(50) 0;
+
+	text-align: center;
+	
+	h2 {
+		margin-bottom: rem-calc(30);
+	}
+
+	.take-action-inner {
+		@include grid-row;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+			width: rem-calc(250);
+		}
+	
+		.button {
+			margin-top: rem-calc(20);
+		}
+		
+		@include breakpoint(small){
+			.volunteer {
+				@include grid-column;
+			}	
+
+			.donate {
+				@include grid-column;
+			}
+
+			.gift {
+				@include grid-column;
+			}
+		}
+		
+		@include breakpoint(medium){
+			.volunteer {
+				@include grid-column(1 of 3);
+			}	
+
+			.donate {
+				@include grid-column(1 of 3);
+			}
+
+			.gift {
+				@include grid-column(1 of 3);
+			}
+		}
+	}
+}
+
+
+
+
+
+// Intro
+.intro {
+  @include grid-row();
+
+  .fp-intro {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(10);
+      @include grid-column-offset(1);
+
+      h2 {
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #777;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// Section divider
+.section-divider {
+  @include grid-row();
+
+  hr {
+    @include grid-column(12);
+    @extend .dotted;
+    box-sizing: border-box;
+  }
+}

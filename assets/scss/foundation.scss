@@ -10,7 +10,6 @@
 
 //  Settings
 @import "global/settings"; // Foundation settings file.
-@import "global/demosite-settings"; // These settings are only used for the demosite. Feel free to remove.
 
 // Foundation mixins & browser resets
 @import '../components/foundation-sites/scss/foundation';
@@ -94,6 +93,10 @@
 @import "components/links";
 
 // Templates
+@import "templates/custom";
 @import "templates/front";
+@import "templates/page";
+@import "templates/stories";
+
+@import "templates/frontpage";
 @import "templates/kitchen-sink";
-@import "templates/demosite"; // This template is used for the demosite. Feel free to remove.

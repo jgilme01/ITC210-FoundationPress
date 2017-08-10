@@ -1,0 +1,160 @@
+.site-header {
+	@include grid-row(null, null, expand);
+	
+	.logo {
+		transition: .3s;
+		@include breakpoint(small) {
+			width: 300px; 
+		}
+	}
+}
+
+.menu-icon {
+	top: 10px;
+}
+
+.menu-item {
+	font-family: $header-font-family;
+	padding: 12.5px 0 0;
+
+	@include breakpoint(large down) {
+		margin-bottom: 10px;
+		padding: 0;
+		
+		&-51 {
+			margin-top: 30px;
+		}
+	}
+	
+	&-70 {
+		a {
+			background: #669999;
+			color: #fff !important;
+			margin: 0 10px;
+			
+			@include breakpoint(small down) {
+				margin: 0 10px;
+			}
+		}
+	}
+	
+	&-75 {
+		@include breakpoint(large down) {
+			display: none !important;
+		}
+	}
+}
+
+.top-bar {
+	@include breakpoint(large down) {
+		padding: 0;
+	}
+}
+
+.top-bar-right {
+	position: relative;
+	
+	.desktop-search {
+		display: none;
+		&.show {
+			display: block;
+			position: absolute;
+			top: 12.5px;
+			right: 120px;
+		}
+		
+		.searchform {		
+			.input-group {
+				table-layout: fixed;
+				max-width: 600px;
+
+				input[type=text] {
+					font-family: $header-font-family;
+					max-width: 600px;
+					padding: 0 15px;
+				}
+			}
+		}
+	}
+}
+
+
+.news {
+	@include grid-row();
+	
+	.brand {
+		@include grid-column(3);
+		
+		img {
+			display: none;
+			@include breakpoint(medium) {
+				display: block;
+				width: rem-calc(120);
+			}
+		}
+	}
+	
+	.newsletter {
+		@include grid-column(12);
+		
+		@include breakpoint(medium) {
+			@include grid-column(6);
+		}
+	}
+	
+	.social {
+		@include grid-column(12);
+		
+		@include breakpoint(medium) {
+			@include grid-column(3);
+		}
+		
+		a {
+			font-size: 14px;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+// Page Title
+.entry-title-header {
+	background-attachment: scroll;
+	background-position: bottom center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+	position: relative;
+	transition: .3s;
+	
+	@include breakpoint(medium) {
+		background-position: bottom; 
+		background-attachment: fixed;
+		height: 50vh;
+	}
+	
+	.entry-title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+	}
+}
+
+
+
+
+// subscription
+.newsletter-email {
+	background: #fff;
+	border: 0;
+	max-width: 300px;
+	margin: 0;
+	display: inline-block;
+}
+
+.newsletter-submit {
+	display: inline-block;
+	margin: 0;
+}

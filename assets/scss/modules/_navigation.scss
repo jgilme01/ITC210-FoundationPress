@@ -1,12 +1,12 @@
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(medium);
+  @include hide-for(xlarge);
 }
 
 .desktop-menu,
 .site-navigation .top-bar-left {
-  @include show-for(medium);
+  @include show-for(xlarge);
 }
 
 
@@ -43,7 +43,7 @@
 
   // current page
   .current_page_item > a {
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 
