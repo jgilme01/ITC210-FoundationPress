@@ -1,10 +1,57 @@
+.social-container {
+	border-top: 1px solid #c9c9c9;
+	padding-top: rem-calc(40);
+	margin-top: rem-calc(40);
+}
+.news {
+	@include grid-row;
+	
+	.brand {
+		@include grid-column(2);
+		
+		img {
+			display: none;
+			@include breakpoint(large) {
+				display: block;
+				width: rem-calc(100);
+			}
+		}
+	}
+	
+	.newsletter {
+		@include breakpoint(small) {
+			@include grid-column(12);
+			margin-bottom: rem-calc(20);
+		}
+		
+		@include breakpoint(large) {
+			@include grid-column(6);
+		}		
+	}
+	
+	.social {
+		@include breakpoint(small) {
+			@include grid-column(12);
+		}
+		
+		@include breakpoint(large) {
+			@include grid-column(4);
+		}
+		
+		a {
+			font-size: 14px;
+			margin-right: 10px;
+		}
+	}
+}
+
 .footer-container {
+	background: #669999;
+	color: #fff;
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  border-top: 1px solid $medium-gray;
   margin-top: rem-calc(40);
-	padding-top: rem-calc(40);
 }
 
 .footer {
@@ -16,4 +63,9 @@
     margin: 0;
     padding: 0;
   }
+	
+	.copy {
+		@include grid-col();
+		font-family: $header-font-family;
+	}
 }

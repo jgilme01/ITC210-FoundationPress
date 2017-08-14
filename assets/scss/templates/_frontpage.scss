@@ -93,10 +93,12 @@
 		@include breakpoint(small){
 			.volunteer {
 				@include grid-column;
+				margin-bottom: rem-calc(30);
 			}	
 
 			.donate {
 				@include grid-column;
+				margin-bottom: rem-calc(30);
 			}
 
 			.gift {
@@ -104,7 +106,7 @@
 			}
 		}
 		
-		@include breakpoint(medium){
+		@include breakpoint(large){
 			.volunteer {
 				@include grid-column(1 of 3);
 			}	
@@ -119,10 +121,6 @@
 		}
 	}
 }
-
-
-
-
 
 // Intro
 .intro {
