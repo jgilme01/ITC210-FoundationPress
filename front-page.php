@@ -5,6 +5,7 @@ Template Name: Front
 get_header(); 
 ?>
 
+<!-- Banner -->
 <header class="front-banner" role="banner">
 	<div class="front-banner-inner">
 		<div class="tagline">
@@ -15,6 +16,7 @@ get_header();
 	</div>
 </header>
 
+<!-- Take Action -->
 <div class="take-action">
 	<div class="take-action-inner">
 		<h2>Be the Change</h2>
@@ -33,38 +35,25 @@ get_header();
 	</div>
 </div>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
-	<div class="fp-intro">
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
+<!-- News -->
+<div class="front-news">
+	<h2><a href="#">News</a></h2>
+	<?php do_action( 'foundationpress_before_content' ); ?>
+	<?php query_posts('category_name="news"&showposts=3');
+	while (have_posts()) : the_post(); ?>
+	<div class="content">
+		<div class="card">
+			<div class="card-section">
+				<a href="<?php the_permalink(); ?>">
+					<h6><?php the_title(); ?></h6>
+					<small><?php echo get_the_date(); ?></small>
+				</a>
 			</div>
-			<footer>
-				<?php
-					wp_link_pages(
-						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
-							'after'  => '</p></nav>',
-						)
-					);
-				?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
 		</div>
 	</div>
-</section>
-
-<?php endwhile;?>
-<?php do_action( 'foundationpress_after_content' ); ?>
-
-<div class="section-divider">
-	<hr />
+	<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+	<?php do_action( 'foundationpress_after_content' ); ?>
 </div>
 
 <?php get_footer();
