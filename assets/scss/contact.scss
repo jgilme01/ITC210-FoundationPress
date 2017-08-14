@@ -1,0 +1,77 @@
+input[type="text"],
+input[type="email"],
+input[type="message"],
+input[type="subject"],
+textarea{
+    border:0em solid #eee;
+    border-radius:5px;
+    background-color:#eaeae7;
+}
+
+.wpcf7{
+
+}
+
+.map-div{
+    background-image:url(../images/map.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+    height:300px;
+    margin-bottom:40px;
+}
+
+.map-div-2{
+    background-color:#eaeae7;
+    height:300px;
+    width:33%;
+    
+}
+
+#form-submit{
+    background-color:#669999;
+    width:50%;
+    height:50px;
+    margin-left:25%;
+    margin-top:10px;
+    font-size:1.1em;
+}
+
+
+.contact-us-list {
+  list-style-type: none;
+  margin: 55px 0px 0px 0px;
+
+  li {
+    a {
+      color: $black;
+    }
+  }
+}
+
+  li::before {
+    margin-right: 2rem;
+    font-size: 2rem;
+    vertical-align: middle;
+    color: $dark-gray;
+    font-family: 'FontAwesome';
+  }
+// generates icons - change fontawesome content codes below to change icons
+  .address::before {
+    content: '\f041';
+    margin-left: 0.4rem;
+    margin-right: 2.3rem;
+  }
+
+  .email::before {
+    content: '\f003';
+  }
+
+  .phone::before {
+    content: '\f098';
+  }
+
+
+

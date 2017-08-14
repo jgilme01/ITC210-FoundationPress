@@ -79,6 +79,11 @@
   My custom styles:
   Add your scss files below to structure your project styles
 */
+@import "contact.scss";
+@import "donate.scss";
+@import "single-news-post.scss";
+@import "news.scss";
+@import "events.scss";
 
 // Modules
 @import "modules/navigation";
