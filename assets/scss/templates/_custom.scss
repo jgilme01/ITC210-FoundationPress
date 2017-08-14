@@ -16,7 +16,15 @@
 .menu-item {
 	font-family: $header-font-family;
 	padding: 12.5px 0 0;
-
+	
+	&.is-dropdown-submenu-parent {
+		li {
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+	}
+	
 	@include breakpoint(large down) {
 		margin-bottom: 10px;
 		padding: 0;
