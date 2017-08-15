@@ -2,13 +2,28 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: rem-calc(300);
-
+  background-attachment: scroll;
+  height: 18vh;
+  position: relative;
+  //transition: .3s;
+	
   @include breakpoint(medium) {
-    height: rem-calc(400);
+    height: 30vh;
   }
+	
+	@include breakpoint(large) {
+		height: 40vh;
+	}
 
-  @include breakpoint(xlarge) {
-    height: rem-calc(500);
+  @include breakpoint(xxlarge) {
+    height: 50vh;
   }
+	
+	.entry-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
 }
