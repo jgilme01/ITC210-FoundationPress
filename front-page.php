@@ -43,10 +43,12 @@ get_header();
 	while (have_posts()) : the_post(); ?>
 	<div class="content">
 		<div class="card">
+			<a href="<?php the_permalink(); ?>">
+				<img src="" alt="">
+			</a>
 			<div class="card-section">
 				<a href="<?php the_permalink(); ?>">
 					<h6><?php the_title(); ?></h6>
-					<small><?php echo get_the_date(); ?></small>
 				</a>
 			</div>
 		</div>

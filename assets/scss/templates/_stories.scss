@@ -44,13 +44,16 @@
 
 		@include breakpoint(large) {
 			.card-section {
-				color: #fff;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 				text-align: center;
 				visibility: hidden;
+				
+				h3, h4 {
+					color: #fff;
+				}
 			}
 
 			&:hover {
