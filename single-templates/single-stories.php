@@ -9,6 +9,7 @@
 
 get_header(); ?>
 
+<!-- Story -->
 <div class="story">
 	<div class="story-inner" role="main">
 	<?php do_action( 'foundationpress_before_content' ); ?>
@@ -42,7 +43,7 @@ get_header(); ?>
 	</div>
 </div>
 
-
+<!-- More Stories -->
 <div class="more-stories">
 	<div class="more-stories-inner">
 		<header>
@@ -56,7 +57,7 @@ get_header(); ?>
 		'post__not_in' => array( $post->ID )
 	)); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-		<div class="content">
+		<div class="human">
 			<div class="card">
 				<a href="<?php the_permalink() ?>">
 					<?php if ( has_post_thumbnail() ) { ?>

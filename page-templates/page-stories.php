@@ -10,7 +10,7 @@ get_header(); ?>
 	<h1 class="entry-title"><?php the_title(); ?></h1>
 </header>
 
-<div class="main-wrap" role="main">
+<div class="humans" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php 
@@ -20,7 +20,7 @@ query_posts( array(
 ) );
 while ( have_posts() ) : the_post(); ?>
 	<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-	<div class="content">
+	<div class="human">
 		<div class="card">
 			<a href="<?php the_permalink() ?>">
 				<?php if ( has_post_thumbnail() ) { ?>
