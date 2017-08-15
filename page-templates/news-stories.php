@@ -27,13 +27,13 @@ while ( have_posts() ) : the_post(); ?>
 		<div class="news-card">
 			<a href="<?php the_permalink() ?>">
 				<?php if ( has_post_thumbnail() ) { ?>
+                <h3><?php the_title(); ?></h3>
 				<div class="news-story-thumbnail">
 					<?php the_post_thumbnail(); ?>
 				</div>
 				<?php } ?>
 				<div class="news-section">
-					<h3><?php the_title(); ?></h3>
-					<h4><?php echo get_the_date(); ?></h4>
+					<h5><?php echo get_the_date(); ?></h5>
 				</div>
 			</a>
 		</div>
