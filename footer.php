@@ -11,7 +11,7 @@
 ?>
 
 	<div class="social-container">
-		<div class="news">
+		<div class="content">
 			<div class="brand">
 				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/logo-black.svg" alt="Homeless Humans of Tacoma">
 			</div>
