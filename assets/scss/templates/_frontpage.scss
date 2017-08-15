@@ -162,6 +162,7 @@
 
 .front-news {
 	@include grid-row;
+	padding: rem-calc(50) 0;
 	h2 {
 		text-align: center;		
 	}
