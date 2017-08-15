@@ -95,14 +95,14 @@
 	background-position: bottom center; 
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+    height: 50vh;
 	position: relative;
 	transition: .3s;
 	
 	@include breakpoint(medium) {
 		background-position: bottom; 
 		background-attachment: fixed;
-		height: 50vh;
+        height:60vh;
 	}
 	
 	.entry-title {

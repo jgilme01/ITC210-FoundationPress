@@ -1,0 +1,133 @@
+h1.events-title{
+    color:#fff;
+    a{
+        color:#fff;
+    }
+}
+
+/**************jaewon's code*******/
+// page-stories.php
+.content {
+	@include breakpoint(medium) {
+		@include grid-column(6);
+	}
+	
+	@include breakpoint(medium down) {
+		@include grid-column(10);
+		@include grid-column-position(center);
+	}	
+}
+
+
+.card {
+	.story-thumbnail {
+		img {
+			object-fit: cover;
+			object-position: 50% 20%;
+
+
+			@include breakpoint(small) {
+				width: 600px;
+				height: 300px;	
+			}
+
+			@include breakpoint(medium) {
+				width: 600px;
+				height: 400px;	
+			}
+
+			@include breakpoint(large) {
+				width: 600px;
+				height: 500px;	
+			}
+		}
+	}
+	
+	position: relative;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+
+	@include breakpoint(large) {
+		.card-section {
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			visibility: hidden;
+		}
+
+		&:hover {
+			opacity: .8;
+			.card-section {
+				visibility: visible;
+			}
+		}
+	}
+	
+}
+
+.event-thumbnail{
+    width:50% !important;
+}
+
+// single-stories.php
+.story {
+	padding: 20px 0;
+	
+	.story-inner{
+		@include grid-row;
+
+		.featured-image {
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		
+		.story-content {
+			@include breakpoint(small) {
+				@include grid-column(10);
+				@include grid-column-position(center);	
+			}
+			@include breakpoint(medium) {
+				@include grid-column(8);
+				@include grid-column-position(center);	
+			}
+		}
+	}
+}
+
+.more-stories {
+	background: #eaeae9;
+	padding: 30px 0;
+	
+	header {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	
+	.more-stories-inner {
+		@include grid-row;
+
+		.content {
+			@include breakpoint(medium) {
+				@include grid-column(4);
+			}
+
+			@include breakpoint(medium down) {
+				@include grid-column(10);
+				@include grid-column-position(center);
+			}
+		}
+	}
+}
+
+
+/******header-post-image***********/
+.header-post-image{
+    background-image:url(images/)
+}
