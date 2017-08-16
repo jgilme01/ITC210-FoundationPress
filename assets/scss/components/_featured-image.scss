@@ -3,21 +3,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  height: 18vh;
+  height: 50vh;
   position: relative;
-  //transition: .3s;
+  transition: .3s;
 	
   @include breakpoint(medium) {
-    height: 30vh;
-  }
-	
-	@include breakpoint(large) {
-		height: 40vh;
-	}
-
-  @include breakpoint(xxlarge) {
-    height: 50vh;
-  }
+        background-attachment: fixed;
+        height: 60vh;
+    }
 	
 	.entry-title {
         position: absolute;
