@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Donation Post
+ * Template Name: Donor Recognition Post
  * Template Post Type: post
  *
  * @package FoundationPress

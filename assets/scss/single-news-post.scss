@@ -48,5 +48,11 @@ $responsive-blog-post-vert-seperate: 4rem;
 
 
 .news-post-div{
-    width:60%;
+    @include grid-row;
+    .main-article{
+        @include grid-col(9);
+    }
+    .sidebar{
+        @include grid-col(3);
+    }
 }

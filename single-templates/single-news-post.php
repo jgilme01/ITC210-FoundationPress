@@ -10,6 +10,7 @@
 get_header(); ?>
 
 	<div class="news-post-div" role="main">
+        <div class="main-article">
     <!--Title of Post-->
     <h1><?php the_title(); ?></h1>
     <small><?php the_time('F j, Y');?></small>
@@ -25,10 +26,15 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 			<?php the_content(); ?>
 			<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
-        <div class="medium-3"><?php get_sidebar(); ?></div>
 		</article>
+    <?php do_action('back_button'); ?>
 	<?php endwhile;?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 	</div>
 
-<?php get_footer()?>
+<!--sidebar-->
+<?php get_sidebar();?>
+</div>
+
+<?php get_footer();?>
+
