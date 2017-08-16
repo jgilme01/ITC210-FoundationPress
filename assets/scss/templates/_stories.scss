@@ -4,6 +4,10 @@
 	margin: rem-calc(50) auto;
 }
 .human {
+	&:last-child {
+		float: left !important;
+	}
+	
 	@include breakpoint(medium) {
 		@include grid-column(6);
 	}

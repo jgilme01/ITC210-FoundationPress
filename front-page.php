@@ -37,18 +37,18 @@ get_header();
 
 <!-- News -->
 <div class="front-news">
-	<h2><a href="#">News</a></h2>
+	<h2><a href="<?php echo get_permalink( get_page_by_title( 'news' ) ); ?>">News</a></h2>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php query_posts('category_name="news"&showposts=3');
 	while (have_posts()) : the_post(); ?>
 	<div class="content">
 		<div class="card">
 			<a href="<?php the_permalink(); ?>">
-				<img src="" alt="">
+				<?php the_post_thumbnail(); ?>
 			</a>
 			<div class="card-section">
 				<a href="<?php the_permalink(); ?>">
-					<h6><?php the_title(); ?></h6>
+					<h5><?php the_title(); ?></h5>
 				</a>
 			</div>
 		</div>
