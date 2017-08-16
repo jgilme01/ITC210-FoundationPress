@@ -16,9 +16,9 @@ get_header(); ?>
 	<?php 
 	query_posts( array(
 		'category_name'  => 'Stories',
-		'posts_per_page' => 4
-
+		'posts_per_page' => 5
 	) );
+	
 	while ( have_posts() ) : the_post(); ?>
 	<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 	<div class="human">
@@ -36,16 +36,6 @@ get_header(); ?>
 		</div>
 	</div>
 	<?php endwhile;?>
-	<?php
-	if ( function_exists( 'foundationpress_pagination' ) ) :
-		foundationpress_pagination();
-	elseif ( is_paged() ) :
-	?>
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php endif; ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 </div>
