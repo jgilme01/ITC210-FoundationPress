@@ -13,35 +13,9 @@ get_header(); ?>
 	<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 </header>
 
-<div class="main-wrap" role="main">
+<?php if(have_posts()): while(have_posts()):the_post();?>
+<?php the_content();?>
+<?php endwhile; endif; ?>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php 
-query_posts( array(
-	'category_name'  => 'donation',
-	'posts_per_page' => -1
-) );
-while ( have_posts() ) : the_post(); ?>
-	<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-	<div class="content">
-		<div class="card">
-			<a href="<?php the_permalink() ?>">
-				<?php if ( has_post_thumbnail() ) { ?>
-				<div class="news-story-thumbnail">
-					<?php the_post_thumbnail(); ?>
-				</div>
-				<?php } ?>
-				<div class="news-section">
-					<h3><?php the_title(); ?></h3>
-					<h4><?php echo get_the_date(); ?></h4>
-				</div>
-			</a>
-		</div>
-	</div>
-<?php endwhile;?>
-
-<?php do_action( 'foundationpress_after_content' ); ?>
-
-</div>
 
 <?php get_footer();

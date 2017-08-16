@@ -47,3 +47,12 @@ $responsive-blog-post-vert-seperate: 4rem;
 }
 
 
+.news-post-div{
+    @include grid-row;
+    .main-article{
+        @include grid-col(9);
+    }
+    .sidebar{
+        @include grid-col(3);
+    }
+}

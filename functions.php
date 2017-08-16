@@ -51,5 +51,17 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
+/**back button**/
+add_action( 'back_button', 'wpse221640_back_button' );
+function wpse221640_back_button()
+{
+    if ( wp_get_referer() )
+    {
+        $back_text = __( '&laquo; Back' );
+        $button    = "\n<button id='my-back-button' class='btn button my-back-button' onclick='javascript:history.back()'>$back_text</button>";
+        echo ( $button );
+    }
+}
+
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
