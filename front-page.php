@@ -39,7 +39,41 @@ get_header();
 <div class="front-news">
 	<h2><a href="<?php echo get_permalink( get_page_by_title( 'news' ) ); ?>">News</a></h2>
 	<?php do_action( 'foundationpress_before_content' ); ?>
-	<?php query_posts('category_name="news"&showposts=3');
+	<?php query_posts('category_name="news"&showposts=1');
+	while (have_posts()) : the_post(); ?>
+	<div class="content">
+		<div class="card">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+			<div class="card-section">
+				<a href="<?php the_permalink(); ?>">
+					<h5><?php the_title(); ?></h5>
+				</a>
+			</div>
+		</div>
+	</div>
+	<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+	
+	<?php query_posts('category_name="events"&showposts=1');
+	while (have_posts()) : the_post(); ?>
+	<div class="content">
+		<div class="card">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+			</a>
+			<div class="card-section">
+				<a href="<?php the_permalink(); ?>">
+					<h5><?php the_title(); ?></h5>
+				</a>
+			</div>
+		</div>
+	</div>
+	<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+	
+	<?php query_posts('category_name="donor-recognition"&showposts=1');
 	while (have_posts()) : the_post(); ?>
 	<div class="content">
 		<div class="card">

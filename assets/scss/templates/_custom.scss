@@ -36,7 +36,7 @@
 		}
 	}
 	
-	&-70 {
+	&-70, &-59 {
 		a {
 			background: #669999;
 			color: #fff !important;
@@ -48,7 +48,7 @@
 		}
 	}
 	
-	&-75 {
+	&-75, &-60 {
 		@include breakpoint(large down) {
 			display: none !important;
 		}
