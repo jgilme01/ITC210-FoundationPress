@@ -1,13 +1,67 @@
+.main-wrap {
+	
+
 #group {
 	position: absolute;
-	border: solid 1px red;
+	//border: solid 1px red;
+	margin: 1.5rem;
 }
 
 #group-title {
 	position: absolute;
-    padding-top: 4rem;
-	left:50%;
-    transform: translate(-50%, -50%);
+    padding-top: 1.5rem;
+	padding-left: 35%;
+	//left:50%;
+    //transform: translate(-50%, -50%);
 	
 }
 
+
+#zebra {
+    background: #eaeae7;
+}
+
+h1,h2,h3,h4, h5 {
+    color:#669999;
+}
+
+
+
+
+.centertext {
+    height:150x;
+    width:750px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+}
+
+
+
+
+//ACCORDION MENU
+
+
+
+ul.accordion {
+  margin: 1.5rem;
+
+   li.accordion-item {	
+	   //border: none;
+	   
+	 a.accordion-title {
+   
+	font-size: 1rem;
+	border:none;
+	
+	border-bottom: solid thin black;
+	color: black;
+	}
+	
+	   .accordion-content {
+
+	   }
+ 
+}
+}
