@@ -67,7 +67,6 @@ get_header(); ?>
 					<?php } ?>
 					<div class="card-section">
 						<h3><?php the_title(); ?></h3>
-						<h4><?php echo get_the_date(); ?></h4>
 					</div>
 				</a>
 			</div>
