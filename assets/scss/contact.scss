@@ -30,13 +30,16 @@ textarea{
     
 }
 
-#form-submit{
+input.wpcf7-submit{
     background-color:#669999;
     width:50%;
     height:50px;
     margin-left:25%;
     margin-top:10px;
     font-size:1.1em;
+    box-shadow: none;
+    border-radius:5px;
+    border: 0;
 }
 
 

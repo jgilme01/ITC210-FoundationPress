@@ -1,5 +1,8 @@
 .news {
-	@include breakpoint(medium) {
+    &:last-child {
+        float: left !important;
+    }
+    @include breakpoint(medium) {
 		@include grid-column(4);
 	}
 	

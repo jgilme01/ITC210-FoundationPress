@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Donation Needs
+Template Name: Donation Recognition
  */
 
 get_header(); ?>
@@ -10,7 +10,7 @@ get_header(); ?>
 
 <?php $backImg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );?>
 <header class="entry-title-header" style="background-image: url('<?php echo $backImg[0]; ?>');">
-	<h1 class="entry-title needs-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+	<h1 class="entry-title recognition-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 </header>
 
 <div class="main-wrap" role="main">
@@ -18,7 +18,7 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php 
 query_posts( array(
-	'category_name'  => 'donation needs',
+	'category_name'  => 'donor recognition',
 	'posts_per_page' => -1
 ) );
 while ( have_posts() ) : the_post(); ?>
