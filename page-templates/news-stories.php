@@ -31,18 +31,36 @@ while ( have_posts() ) : the_post(); ?>
 				<div class="news-story-thumbnail">
 					<?php the_post_thumbnail(); ?>
 				</div>
-				<?php } ?>
 				<div class="news-section">
 					<h5><?php echo get_the_date(); ?></h5>
 				</div>
 			</a>
 		</div>
+  
 	</div>
+   
+        
     
 <?php endwhile;?>
 
-<?php do_action( 'foundationpress_after_content' ); ?>
 
-</div>
+<?php do_action( 'foundationpress_after_content' ); ?> 
+
+<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+
+<!--pagination
+    
+    <ul class="pagination pagination-circular" role="navigation" aria-label="Pagination">
+            <li class="disabled">« <span class="show-for-sr">Previous page</span></li>
+            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+            <li><a href="#" aria-label="Page 2">2</a></li>
+            <li><a href="#" aria-label="Page 3">3</a></li>
+            <li><a href="#" aria-label="Page 4">4</a></li>
+            <li><a href="#" aria-label="Page 5">5</a></li>
+            <li><a href="#" aria-label="Next page">» <span class="show-for-sr">Next page</span></a></li>
+    </ul>
+
+</div>-->
 
 <?php get_footer();
