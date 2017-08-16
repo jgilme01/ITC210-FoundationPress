@@ -168,6 +168,27 @@
 	}
 	
 	.content {
-		@include grid-col(1 of 3);
+		@include breakpoint(small) {
+			@include grid-col(12);
+		}
+		
+		@include breakpoint(large) {
+			@include grid-col(1 of 3);
+			&:last-child {
+				float: left !important;
+			}
+		}
+		
+		.card {
+			img {
+				object-fit: cover;
+				object-position: 50% 20%;
+
+				@include breakpoint(small) {
+					width: 100%;
+					height: 300px;	
+				}
+			}
+		}
 	}
 }
