@@ -1,7 +1,5 @@
 .news {
-    &:last-child {
-        float: left !important;
-    }
+    
     @include breakpoint(medium) {
 		@include grid-column(4);
 	}
@@ -9,7 +7,7 @@
 	@include breakpoint(medium down) {
 		@include grid-column(8);
 		@include grid-column-position(center);
-	}	
+		}	
 }
 
 h1.entry-title.news-title{
